@@ -9,6 +9,8 @@ https://dev.to/salehmubashar/search-bar-in-react-js-545l
 
 */
 
+let movieDetails = {};
+
 function App() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -63,11 +65,7 @@ function App() {
         </div>
         <ul>
           {filteredData.map((item) => (
-            <li
-              ref={inputRef}
-              onClick={() => console.log("clicked")}
-              key={item.title}
-            >
+            <li ref={inputRef} key={item.title}>
               {item.title}
             </li>
           ))}
