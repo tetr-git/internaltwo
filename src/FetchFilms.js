@@ -3,7 +3,7 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 
-function FetchFilms({ detailsHandler }) {
+function FetchFilms({ showDetails }) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -43,8 +43,7 @@ function FetchFilms({ detailsHandler }) {
       }
     });
     return (
-      <div className="main">
-        <h1>Star Wars Api Internal 2</h1>
+      <div>
         <div className="search">
           <TextField
             id="outlined-basic"
@@ -58,7 +57,7 @@ function FetchFilms({ detailsHandler }) {
           {filteredData.map((item) => (
             <li ref={inputRef} key={item.title}>
               {item.title}
-              <button onClick={detailsHandler(item)}> details </button>
+              <button onClick={showDetails(item)}>details</button>
             </li>
           ))}
         </ul>
