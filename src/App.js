@@ -2,7 +2,7 @@ import "./App.css";
 import FetchFilms from "./FetchFilms";
 import DetailsComponent from "./DetailsC";
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 /*
 @sources
@@ -23,8 +23,6 @@ function App() {
   const showDetails = (param) => (d) => {
     detailsSet(true);
     detailsParamSet(param);
-    //var getDetailsMovieId = param;
-    //console.log(getDetailsMovieId);
   };
 
   return (
