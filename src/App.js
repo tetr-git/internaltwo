@@ -3,8 +3,6 @@ import FetchFilms from "./FetchFilms";
 import DetailsComponent from "./DetailsC";
 import * as React from "react";
 import { useState, useEffect } from "react";
-import TextField from "@mui/material/TextField";
-import JSONPretty from "react-json-pretty";
 
 /*
 @sources

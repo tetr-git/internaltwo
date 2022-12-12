@@ -1,8 +1,6 @@
 import "./App.css";
 import * as React from "react";
-import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
-import { ClassNames } from "@emotion/react";
 
 function DetailsC({ detailsParam, hideDetails }) {
   return (
