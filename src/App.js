@@ -15,34 +15,34 @@ https://beta.reactjs.org/learn
 https://stackoverflow.com/questions/30765163/pretty-printing-json-with-react
 */
 function App() {
-  const [showDetailsSite, showDetailsSiteSet] = useState(false);
-  const [showDetailsSiteParam, showDetailsSiteParamSet] = useState(null);
+  const [details, detailsSet] = useState(false);
+  const [detailsParam, detailsParamSet] = useState(null);
 
   const hideDetails = (d) => {
-    showDetailsSiteSet(false);
+    detailsSet(false);
   };
 
   const showDetails = (param) => (d) => {
-    showDetailsSiteSet(true);
-    showDetailsSiteParamSet(param);
+    detailsSet(true);
+    detailsParamSet(param);
     //var getDetailsMovieId = param;
     //console.log(getDetailsMovieId);
   };
 
   return (
-    <div>
+    <>
       <h3>Star Wars Api Internal 2</h3>
-      {showDetailsSite ? (
+      {details ? (
         <DetailsComponent
-          showDetailsSiteParam={showDetailsSiteParam}
+          detailsParam={detailsParam}
           hideDetails={hideDetails}
         />
       ) : (
         <FetchFilms showDetails={showDetails} />
       )}
-    </div>
+    </>
   );
 }
 
 export default App;
-//JSON.stringify(showDetailsSiteParam, null, 2)
+//JSON.stringify(detailsParam, null, 2)

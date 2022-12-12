@@ -55,10 +55,10 @@ function FetchFilms({ showDetails }) {
         </div>
         <ul>
           {filteredData.map((item) => (
-            <li ref={inputRef} key={item.title}>
+            <p ref={inputRef} key={item.title}>
               {item.title}
               <button onClick={showDetails(item)}>details</button>
-            </li>
+            </p>
           ))}
         </ul>
       </div>
