@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Internal2 WebDevelopment Course HTW
+
+First example project with react for a university course
+->A lot of spaghetti code<-
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
